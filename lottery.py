@@ -1,5 +1,7 @@
 from random import shuffle
 
+won = False
+
 def draw():
     balls = [x for x in range(1,60)]
     shuffle(balls)
@@ -15,8 +17,10 @@ def checkResults(ticket, draw):
 # generate our ticket
 ticket = draw()
 
-i = 0
-while checkResults(ticket, draw()) is not True:
-    i += 1
+for x in range(1000000):
+    won = checkResults(ticket, draw())
 
-print(f"You won after {i} draws.")
+if won:
+    print("You won!")
+else:
+    print("Better luck next time!")
