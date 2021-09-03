@@ -4,7 +4,7 @@ def draw():
     balls = [x for x in range(1,60)]
     shuffle(balls)
 
-    numbers = balls[:3]
+    numbers = balls[:6]
     numbers.sort()
 
     return numbers
