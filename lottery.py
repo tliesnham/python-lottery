@@ -1,7 +1,5 @@
 from random import shuffle
 
-won = False
-
 def draw():
     balls = [x for x in range(1,60)]
     shuffle(balls)
@@ -16,6 +14,7 @@ def checkResults(ticket, draw):
 
 
 if __name__ == '__main__':
+    won = False
 
     ticket = draw() # generate our ticket
 
