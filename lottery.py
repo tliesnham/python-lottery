@@ -14,13 +14,16 @@ def draw():
 def checkResults(ticket, draw):
     return draw == ticket
 
-ticket = draw() # generate our ticket
 
-# simulate one million draws
-for x in range(1000000):
-    won = checkResults(ticket, draw())
+if __name__ == '__main__':
 
-if won:
-    print("You won!")
-else:
-    print("Better luck next time!")
+    ticket = draw() # generate our ticket
+
+    # simulate one million draws
+    for x in range(1000000):
+        won = checkResults(ticket, draw())
+
+    if won:
+        print("You won!")
+    else:
+        print("Better luck next time!")
