@@ -14,9 +14,9 @@ def draw():
 def checkResults(ticket, draw):
     return draw == ticket
 
-# generate our ticket
-ticket = draw()
+ticket = draw() # generate our ticket
 
+# simulate one million draws
 for x in range(1000000):
     won = checkResults(ticket, draw())
 
